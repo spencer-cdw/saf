@@ -38,6 +38,7 @@
     "fast-xml-parser": "^3.19.0",
     "flat": "^5.0.2",
     "fs-extra": "^10.1.0",
+    "fse": "^4.0.1",
     "get-installed-path": "^4.0.8",
     "htmlparser2": "^8.0.1",
     "https": "^1.0.0",
@@ -156,7 +157,8 @@
     "prepack": "run-script-os",
     "prepack:win32": "(IF EXIST lib rmdir /s /q lib) && node_modules\\.bin\\tsc -b",
     "prepack:darwin:linux": "rm -rf lib && node_modules/.bin/tsc -b",
-    "test": "ts-mocha --timeout 8000 --forbid-only \"test/**/*.test.ts\""
+    "test": "ts-mocha --timeout 8000 --forbid-only \"test/**/*.test.ts\"",
+    "test-delta": "ts-mocha --timeout 8000 --forbid-only \"test/**/delta.test.ts\""
   },
   "types": "lib/index.d.ts"
 }
